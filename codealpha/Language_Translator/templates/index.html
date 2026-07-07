@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>AI Language Translator</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="blob"></div>
+<div class="blob2"></div>
+
+<div class="container">
+
+<h1>🌍 AI Language Translator</h1>
+
+<p>
+Translate any language instantly
+</p>
+
+<textarea
+id="inputText"
+placeholder="Type something here...">
+</textarea>
+
+<div class="row">
+
+<select id="source">
+
+<option value="en">
+English
+</option>
+
+<option value="te">
+Telugu
+</option>
+
+<option value="hi">
+Hindi
+</option>
+
+<option value="ta">
+Tamil
+</option>
+
+<option value="fr">
+French
+</option>
+
+</select>
+
+<select id="target">
+
+<option value="te">
+Telugu
+</option>
+
+<option value="en">
+English
+</option>
+
+<option value="hi">
+Hindi
+</option>
+
+<option value="ta">
+Tamil
+</option>
+
+<option value="fr">
+French
+</option>
+
+</select>
+
+</div>
+
+<button onclick="translateText()">
+
+Translate
+
+</button>
+
+<textarea
+id="outputText"
+placeholder="Translated text..."
+readonly>
+</textarea>
+
+<button onclick="copyText()">
+
+Copy Translation
+
+</button>
+
+</div>
+
+<script src="{{ url_for('static',
+filename='js/script.js') }}">
+</script>
+
+</body>
+
+</html>
